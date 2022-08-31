@@ -19,14 +19,14 @@ const ItemCount = ({stock, initial}) => {
     }
 
     return (
-        <div class="justify-content-evenly">
-            <div class="d-flex justify-content-around">
-                <button onClick={restar}>-</button>
-                <p className="numero">{cuenta}</p>
-                <button onClick={sumar}>+</button>
+        <div className="justify-content-evenly">
+            <div className="d-flex justify-content-evenly">
+                <button className="btn btn-success" onClick={restar}>-</button>
+                <p className="fs-5">{cuenta}</p>
+                <button className="btn btn-success" onClick={sumar}>+</button>
             </div>
-            <div class="d-flex justify-content-evenly">
-                <button type="button" className="" onClick={onAdd}>Agregar al Carrito</button>
+            <div className="d-flex justify-content-evenly">
+                <button type="button" className="btn btn-danger" onClick={onAdd}>Agregar al Carrito</button>
             </div>
         </div>
     )

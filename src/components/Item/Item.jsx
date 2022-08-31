@@ -2,26 +2,29 @@ import React from "react";
 import { Card, CardBody, CardHeader, CardText, CardTitle } from "reactstrap";
 import ItemCount from "../ItemCount/ItemCount";
 
-const Item = (productos) => {
 
-    const { name, price, descripcion } = productos;
+const Item = ({producto}) => {
+
+    const { name, price, descripcion, img } = producto;
+
     return (
-        <div className="d-flex justify-content-evenly carta">
+        <div className="d-flex justify-content-evenly">
             <div>
             <Card
             className="my-2"
             style={{
             width: '18rem'
             }}>
-            <CardHeader>
+            <CardHeader className="text-center text-success fs-3">
                 {name}
             </CardHeader>
-            <CardBody className="cafrta2">
-                <CardTitle tag="h5">
+            <CardBody>
+                <CardTitle tag="h5" className="text-center text-danger">
                     {price}
                 </CardTitle>
-                <CardText>
-                    {descripcion}
+                <CardText className="text-center fst-italic">
+                <img src='https://imgur.com/AWUS8Ym' />
+                {descripcion}
                 </CardText>
                 <ItemCount initial={1} stock={5}/>
             </CardBody>

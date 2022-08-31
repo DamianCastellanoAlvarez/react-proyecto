@@ -4,11 +4,11 @@ import ItemList from '../ItemList/ItemList'
 import Pedirdatos from '../../helpers/Pedirdatos'
 import { Spinner } from 'reactstrap';
 
+
+
 const ItemListContainer = () => {
 
-    
-
-    const [productos, setProductos] = useState ([])
+    const [producto, setProductos] = useState ([])
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -25,34 +25,34 @@ const ItemListContainer = () => {
     
 if(loading){
     return (
-        <div class="d-flex justify-content-around spinner">
+        <div className="d-flex justify-content-around spinner">
             <div>
                 <Spinner
                     color="success"
-                    size=""
+                    size="rm"
                     type="grow">
                 </Spinner>  
             </div>
             <div>
                 <Spinner
                     color="success"
-                    size=""
+                    size="rm"
                     type="grow">
                 </Spinner>  
             </div>
             <div>
                 <Spinner
                     color="success"
-                    size=""
+                    size="rm"
                     type="grow">
                 </Spinner>  
             </div>
         </div>
     )
-}
+    }
     return (
         <>
-            <ItemList key={productos.name} productos = {productos} />
+            <ItemList productos = {producto} />
         </>
     )
 }
