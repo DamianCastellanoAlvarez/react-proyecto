@@ -22,8 +22,8 @@ const Item = ({producto}) => {
                 <CardTitle tag="h5" className="text-center text-danger">
                     {price}
                 </CardTitle>
-                <CardText className="text-center fst-italic">
-                <img src='https://imgur.com/AWUS8Ym' />
+                <CardText className=" text-center fst-italic">
+                <img className="img-thumbnail" src={`${img}`} />
                 {descripcion}
                 </CardText>
                 <ItemCount initial={1} stock={5}/>
