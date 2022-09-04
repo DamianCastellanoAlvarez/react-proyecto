@@ -3,6 +3,7 @@ import '../NavBar/NavBar.jsx'
 import logo from '../../assets/Logo.png'
 import CartWidget from "../CartWidget/CartWidget.jsx"
 import '../NavBar/NavBar.css'
+import { Link } from "react-router-dom"
 
 
 
@@ -16,18 +17,14 @@ const NavBar = () =>{
             <div className="menu">
                 <nav>
                     <ul className="">
-                        
                         <li>
-                            <a href="#" className="">Inicio</a>
+                            <Link to="/" >Inicio</Link>
                         </li>
                         <li>
-                            <a href="./productos.html" className="">productos</a>
+                            <Link to='{Blog}' >Blog</Link>
                         </li>
                         <li>
-                            <a href="./blog.html" className="">Blog</a>
-                        </li>
-                        <li>
-                            <a href="./contactos.html" className="">Contacto</a>
+                            <Link to='{Contacto}'>Contacto</Link>
                         </li>
                     </ul>
                 </nav>
